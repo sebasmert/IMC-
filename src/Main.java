@@ -1,15 +1,34 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        Scanner teclado=new Scanner (System.in);
+        double peso;
+        double estatura;
+        double imc;
+        String situacion;
+        System.out.println("Digite su peso");
+        peso=teclado.nextDouble();
+        System.out.println("Digite su estatura");
+        estatura=teclado.nextDouble();
+        imc= peso/estatura;
+        if (imc<18.5) {
+            situacion="Peso bajo";
+        } else if (imc<=24.9) {
+            situacion="Peso normal";
+        } else if (imc<=26.9) {
+            situacion="Sobrepeso grado 1";
+        } else if (imc<=29.9) {
+            situacion = "Sobrepeso grado 2";
+        } else if (imc<=34.9) {
+            situacion = "Obesidad tipo 1";
+        } else if (imc<=39.9) {
+            situacion="Obesidad tipo 2";
+        } else if (imc<=49.9) {
+            situacion="Obesidad mórbida";
+        } else{
+            situacion="Obesidad extrema";
         }
+        System.out.println("su indice de masa corporal(IMC) es de: "+imc);
+        System.out.println("su clasificacion es de: "+ situacion);
     }
 }
