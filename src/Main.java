@@ -10,7 +10,7 @@ public class Main {
         peso=teclado.nextDouble();
         System.out.println("Digite su estatura");
         estatura=teclado.nextDouble();
-        imc= peso/estatura;
+        imc= peso/(estatura*2);
         if (imc<18.5) {
             situacion="Peso bajo";
         } else if (imc<=24.9) {
